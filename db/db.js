@@ -4,10 +4,9 @@ dotenv.config();
 
 const uri = process.env.uri
 
-// 'mongodb+srv://nitinsachdeva0202:Uz9eWvpXOb7dVsmM@cluster0.dlrvzss.mongodb.net/Movies'
 const Main = async () => {
     try {
-        await mongoose.connect(uri);
+        await mongoose.connect(uri, { useNewUrlParser: true, dbName: 'movies' });
         console.log('mongoose is connect');
     } catch (error) {
         console.log('there is one error', error);
