@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-dotenv.config();
+// const dotenv = require("dotenv");
+// dotenv.config();
 
-const uri = process.env.uri
+const uri = 'mongodb+srv://nitinsachdeva0202:Uz9eWvpXOb7dVsmM@cluster0.dlrvzss.mongodb.net/Movies'
+// process.env.uri
 
 
 const Main = async () => {
