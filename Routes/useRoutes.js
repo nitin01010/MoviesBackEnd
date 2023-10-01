@@ -2,8 +2,7 @@ const express = require("express");
 const MoviewModel = require("../db/Shema");
 const router = express.Router();
 
-
-router.get('/', async (req, res) => {
+router.get('/Movies/all', async (req, res) => {
     try {
         const data = await MoviewModel.find({});
         res.status(200).json(data);

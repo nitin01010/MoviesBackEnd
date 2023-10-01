@@ -8,9 +8,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(require("./Routes/useRoutes"));
+app.use(require("./Api/useApi"));
 app.use(require("./db/Shema"));
-
-
 
 
 
