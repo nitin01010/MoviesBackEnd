@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
-// const dotenv = require("dotenv");
-// dotenv.config();
+const dotenv = require("dotenv");
+dotenv.config();
 
-const uri = 'mongodb+srv://nitinsachdeva0202:Uz9eWvpXOb7dVsmM@cluster0.dlrvzss.mongodb.net/Movies'
-// process.env.uri
+const uri = process.env.uri
 
-
+// 'mongodb+srv://nitinsachdeva0202:Uz9eWvpXOb7dVsmM@cluster0.dlrvzss.mongodb.net/Movies'
 const Main = async () => {
     try {
         await mongoose.connect(uri);
@@ -17,5 +16,6 @@ const Main = async () => {
 
 Main();
 
+module.exports = Main;
 
 
